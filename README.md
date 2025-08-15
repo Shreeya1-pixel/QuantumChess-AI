@@ -69,6 +69,7 @@ This is a simplified experiment, not a real quantum algorithm. The "quantum" mod
 I'd love to expand it later into deeper simulations with real quantum APIs (like IBM Qiskit). The potential for quantum computing in chess is fascinating - imagine a quantum chess engine that could analyze positions beyond what classical computers can handle, or even beat Magnus Carlsen in an hour through quantum advantage!
 
 The theoretical implications are mind-blowing: quantum algorithms could evaluate chess positions exponentially faster, explore move trees in parallel, and solve problems that are currently intractable for classical computers.
+<img width="3405" height="1965" alt="image" src="https://github.com/user-attachments/assets/9f7a2cad-3d30-451b-878c-0de0880cc1a2" />
 
 ## Installation
 
