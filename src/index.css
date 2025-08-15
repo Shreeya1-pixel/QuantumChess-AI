@@ -1,0 +1,61 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    font-family: 'Inter', sans-serif;
+    background: linear-gradient(135deg, #0f172a 0%, #020617 100%);
+    color: #f8fafc;
+    min-height: 100vh;
+  }
+}
+
+@layer components {
+  .chess-square {
+    @apply relative;
+  }
+  
+  .chess-square.light {
+    background-color: #f0d9b5;
+  }
+  
+  .chess-square.dark {
+    background-color: #b58863;
+  }
+  
+  .quantum-glow {
+    box-shadow: 0 0 20px rgba(99, 102, 241, 0.3);
+  }
+  
+  .quantum-glow-purple {
+    box-shadow: 0 0 20px rgba(168, 85, 247, 0.3);
+  }
+  
+  .move-arrow {
+    position: absolute;
+    z-index: 10;
+    pointer-events: none;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+  
+  .move-arrow.classical {
+    stroke: #3b82f6;
+    fill: none;
+  }
+  
+  .move-arrow.quantum {
+    stroke: #a855f7;
+    fill: none;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    background: linear-gradient(135deg, #6366f1, #a855f7);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+}

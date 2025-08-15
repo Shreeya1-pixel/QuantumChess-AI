@@ -1,0 +1,36 @@
+{
+  "name": "quantum-chess-ai",
+  "version": "1.0.0",
+  "description": "Interactive chess application with classical and quantum AI comparison",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "chess.js": "^1.0.0-beta.6",
+    "express": "^4.18.2",
+    "cors": "^2.8.5",
+    "python-shell": "^5.0.0",
+    "socket.io": "^4.7.2",
+    "framer-motion": "^10.16.4",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-chessboard": "^4.4.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.37",
+    "@types/react-dom": "^18.2.15",
+    "@vitejs/plugin-react": "^4.1.0",
+    "autoprefixer": "^10.4.16",
+    "postcss": "^8.4.31",
+    "tailwindcss": "^3.3.5",
+    "typescript": "^5.2.2",
+    "vite": "^4.5.0"
+  },
+  "keywords": ["chess", "quantum", "ai", "react", "typescript"],
+  "author": "QuantumChess AI Team",
+  "license": "MIT"
+}
