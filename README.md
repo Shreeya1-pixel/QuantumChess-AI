@@ -70,6 +70,8 @@ I'd love to expand it later into deeper simulations with real quantum APIs (like
 
 The theoretical implications are mind-blowing: quantum algorithms could evaluate chess positions exponentially faster, explore move trees in parallel, and solve problems that are currently intractable for classical computers.
 <img width="3405" height="1965" alt="image" src="https://github.com/user-attachments/assets/9f7a2cad-3d30-451b-878c-0de0880cc1a2" />
+<img width="3407" height="1952" alt="image" src="https://github.com/user-attachments/assets/2616af27-7abc-4966-915b-f56efd62b29f" />
+
 
 ## Installation
 
