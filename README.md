@@ -3,6 +3,8 @@
 A fun experiment in blending classical AI chess engines with a basic quantum-inspired model.<br>
 To try it out- https://shreeya1-pixel.github.io/QuantumChess-AI/
 
+<!-- Deployment test - 2025-08-16 -->
+
 ## Inspiration
 
 I was first fascinated when I read a paper on Quantum Computing. The idea that a computer doesn't just pick between 0 or 1 but can work with superpositions of both at once blew my mind.
