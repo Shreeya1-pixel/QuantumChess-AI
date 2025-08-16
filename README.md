@@ -61,7 +61,37 @@ This project is not about building a full quantum computer or chess engine. It's
 
 ## Technical Notes
 
-The classical AI uses sophisticated evaluation including piece-square tables, tactical analysis, and positional understanding. The quantum AI implements a probabilistic model that simulates quantum concepts like superposition and entanglement through weighted move selection and probability distributions.
+### Classical AI Engine Architecture
+The classical AI implements a multi-layered evaluation system with sophisticated algorithms:
+
+- **Piece-Square Tables**: Optimized positioning matrices for each piece type, with dynamic weight adjustments based on game phase
+- **Tactical Evaluation**: Advanced check detection, capture analysis, and checkmate threat assessment using move tree exploration
+- **Positional Analysis**: Center control algorithms, development tracking, and pawn structure evaluation with isolated/doubled pawn detection
+- **Game Phase Awareness**: Dynamic evaluation switching between opening (development focus), middlegame (tactical complexity), and endgame (king activity) strategies
+- **Mobility Assessment**: Legal move counting with weighted piece activity scoring
+- **King Safety**: Castling bonuses, king centralization penalties, and pawn shield evaluation
+
+### Quantum AI Simulation Framework
+The quantum AI implements a probabilistic decision-making system that simulates quantum computing principles:
+
+- **Superposition Simulation**: Evaluates multiple moves simultaneously using weighted probability distributions instead of deterministic selection
+- **Entanglement Modeling**: Coordinates piece interactions across the board through correlated move weighting algorithms
+- **Quantum Tunneling**: Identifies unexpected tactical breakthroughs by exploring low-probability but high-impact move sequences
+- **Coherence Analysis**: Maintains strategic harmony through position evaluation that considers move consistency and long-term planning
+- **Wavefunction Collapse**: Simulates quantum measurement through probabilistic move selection with weighted random sampling
+
+### Performance Optimizations
+- **Move Generation**: Efficient legal move filtering using chess.js with O(n) complexity for position validation
+- **Evaluation Caching**: Memoized position evaluations to prevent redundant calculations
+- **Async Processing**: Non-blocking move generation with Promise-based architecture for responsive UI
+- **Memory Management**: Optimized data structures for board state representation and move history tracking
+
+### Frontend Architecture
+- **React 18**: Leverages concurrent features and automatic batching for optimal rendering performance
+- **TypeScript**: Type-safe component development with strict null checks and interface validation
+- **Framer Motion**: Hardware-accelerated animations with spring physics for smooth transitions
+- **TailwindCSS**: Utility-first CSS with custom quantum theme and responsive design system
+- **SVG Rendering**: Custom arrow visualization with precise coordinate mapping and dynamic scaling
 
 ## Future Potential
 
