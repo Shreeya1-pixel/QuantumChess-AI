@@ -1,6 +1,6 @@
 import React from 'react'
 import { motion } from 'framer-motion'
-import { getQuantumIcon } from '../utils/explanations'
+// import { getQuantumIcon } from '../utils/explanations'
 
 const HowItWorksSection: React.FC = () => {
   const quantumConcepts = [

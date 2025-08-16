@@ -27,8 +27,8 @@ export const isValidMove = (game: Chess, move: string): boolean => {
 
 export const getLegalMoves = (game: Chess, square: string): string[] => {
   try {
-    const moves = game.moves({ square, verbose: true })
-    return moves.map(m => m.to)
+    const moves = game.moves({ square: square as any, verbose: true })
+    return moves.map((m: any) => m.to)
   } catch {
     return []
   }
@@ -42,7 +42,6 @@ export const getPieceValue = (piece: string): number => {
 }
 
 export const evaluatePosition = (game: Chess): number => {
-  const fen = game.fen()
   const board = game.board()
   let evaluation = 0
   

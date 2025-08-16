@@ -66,7 +66,7 @@ const Chessboard: React.FC<ChessboardProps> = ({
         setSelectedSquare(square)
       }
     } else {
-      const piece = game.get(square)
+      const piece = game.get(square as any)
       if (piece && piece.color === game.turn()) {
         setSelectedSquare(square)
       }
@@ -75,7 +75,7 @@ const Chessboard: React.FC<ChessboardProps> = ({
 
   const renderSquare = (file: string, rank: number) => {
     const square = file + rank
-    const piece = game.get(square)
+    const piece = game.get(square as any)
     const isLight = (file.charCodeAt(0) - 97 + rank) % 2 === 0
     const isSelected = selectedSquare === square
     const isHighlighted = arrows.some(arrow => arrow.from === square || arrow.to === square)

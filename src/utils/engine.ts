@@ -12,6 +12,7 @@ interface QuantumMoveResult {
   move: string
   concept: QuantumConcept
   probability: number
+  explanation: string
 }
 
 // Enhanced classical engine simulation
@@ -177,7 +178,7 @@ const evaluateClassicalPosition = (game: Chess, move: any, phase: string): numbe
   return evaluation
 }
 
-const evaluatePieceSquareTables = (game: Chess, move: any): number => {
+const evaluatePieceSquareTables = (game: Chess, _move: any): number => {
   const pieceSquareTables = {
     p: [ // Pawn
       0,  0,  0,  0,  0,  0,  0,  0,
@@ -282,7 +283,7 @@ const evaluateTactics = (game: Chess, move: any): number => {
   return score
 }
 
-const evaluateOpening = (game: Chess, move: any): number => {
+const evaluateOpening = (_game: Chess, move: any): number => {
   let score = 0
   
   // Center control
@@ -315,7 +316,7 @@ const evaluateMiddlegame = (game: Chess, move: any): number => {
   }
   
   // Attack on king
-  const opponentKing = game.turn() === 'w' ? 'k' : 'K'
+  // const opponentKing = game.turn() === 'w' ? 'k' : 'K'
   const board = game.board()
   for (let rank = 0; rank < 8; rank++) {
     for (let file = 0; file < 8; file++) {
@@ -353,7 +354,7 @@ const evaluateEndgame = (game: Chess, move: any): number => {
   return score
 }
 
-const evaluateMobility = (game: Chess, move: any): number => {
+const evaluateMobility = (game: Chess, _move: any): number => {
   const currentMoves = game.moves().length
   return currentMoves * 2
 }
@@ -430,7 +431,7 @@ const generateClassicalReason = (move: any, evaluation: number, phase: string): 
   }
 }
 
-const calculateQuantumWeight = (move: any, game: Chess): number => {
+const calculateQuantumWeight = (move: any, _game: Chess): number => {
   let weight = 1.0
   
   // Position-based weighting
@@ -459,7 +460,7 @@ const calculateQuantumWeight = (move: any, game: Chess): number => {
   return weight
 }
 
-const generateQuantumExplanation = (selectedMove: any, totalMoves: number, concept: QuantumConcept, game: Chess): string => {
+const generateQuantumExplanation = (selectedMove: any, totalMoves: number, concept: QuantumConcept, _game: Chess): string => {
   const moveNotation = selectedMove.move.from.toUpperCase() + selectedMove.move.to.toUpperCase()
   const probabilityPercent = Math.round(selectedMove.probability * 100)
   
@@ -502,14 +503,14 @@ const generateQuantumExplanation = (selectedMove: any, totalMoves: number, conce
   return randomExplanation
 }
 
-const selectQuantumConcept = (move: any, game: Chess): QuantumConcept => {
-  const concepts: QuantumConcept[] = [
-    'superposition',
-    'entanglement', 
-    'probabilistic_collapse',
-    'quantum_tunneling',
-    'coherence'
-  ]
+const selectQuantumConcept = (move: any, _game: Chess): QuantumConcept => {
+  // const concepts: QuantumConcept[] = [
+  //   'superposition',
+  //   'entanglement', 
+  //   'probabilistic_collapse',
+  //   'quantum_tunneling',
+  //   'coherence'
+  // ]
   
   // Select concept based on move characteristics
   if (move.captured) {

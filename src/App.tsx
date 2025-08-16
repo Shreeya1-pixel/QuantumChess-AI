@@ -1,14 +1,13 @@
-import React, { useState, useEffect } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
+import { useState } from 'react'
+import { motion } from 'framer-motion'
 import Chessboard from './components/Chessboard'
 import AnalysisPanel from './components/AnalysisPanel'
 import Header from './components/Header'
 import AboutSection from './components/AboutSection'
 import HowItWorksSection from './components/HowItWorksSection'
 import { Chess } from 'chess.js'
-import { MoveAnalysis, QuantumConcept } from './types/chess'
+import { MoveAnalysis } from './types/chess'
 import { generateClassicalMove, generateQuantumMove } from './utils/engine'
-import { getQuantumExplanation } from './utils/explanations'
 import { exportToPGN, downloadPGN, generateGameSummary } from './utils/pgnExport'
 
 function App() {
@@ -43,7 +42,7 @@ function App() {
                         move: quantumMove.move,
                         concept: quantumMove.concept,
                         probability: quantumMove.probability,
-                        explanation: quantumMove.explanation
+                        explanation: quantumMove.explanation || ''
                       },
                       timestamp: Date.now()
                     }
