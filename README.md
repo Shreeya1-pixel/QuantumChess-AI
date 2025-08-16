@@ -1,7 +1,7 @@
 # QuantumChess AI
 
-A fun experiment in blending classical AI chess engines with a basic quantum-inspired model.
-Try it out- https://shreeya1-pixel.github.io/QuantumChess-AI/
+A fun experiment in blending classical AI chess engines with a basic quantum-inspired model.<br>
+To try it out- https://shreeya1-pixel.github.io/QuantumChess-AI/
 
 ## Inspiration
 
