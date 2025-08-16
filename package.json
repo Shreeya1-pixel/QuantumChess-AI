@@ -2,6 +2,7 @@
   "name": "quantum-chess-ai",
   "version": "1.0.0",
   "description": "Interactive chess application with classical and quantum AI comparison",
+  "type": "module",
   "main": "index.js",
   "scripts": {
     "dev": "vite",
